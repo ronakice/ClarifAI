@@ -12,4 +12,11 @@ result = model.predict_by_url(url="https://i.guim.co.uk/img/static/sys-images/Gu
 concept_list = result["outputs"][0]["data"]["concepts"]
 for concept in concept_list:
     print(str(concept["value"]) + "\t"+ concept["name"])
+
+
 print("Best Prediction is : " +  concept_list[0]["name"])
+#picture of a cat
+result = model.predict_by_url(url="https://github.com/ronakice/ClarifAI/blob/master/Images/chettlescat.jpg?raw=true")
+concept_list = result["outputs"][0]["data"]["concepts"]
+for concept in concept_list:
+    print(str(concept["value"]) + "\t"+ concept["name"])
